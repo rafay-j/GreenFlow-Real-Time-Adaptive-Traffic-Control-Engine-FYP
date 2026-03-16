@@ -7,14 +7,12 @@ This Final Year Project focuses on improving urban traffic management by using c
 
 The system uses a YOLOv8 object detection model trained on a custom dataset constructed from multiple traffic datasets and camera angle images relevant to Karachi’s urban road environment. The detected vehicles are then processed through a counting and density estimation pipeline to produce congestion metrics, which are finally used by a rule-based timing model to predict adaptive traffic signal durations.
 
----
 
 ## Problem Statement
 Urban traffic congestion is a major issue in large cities such as Karachi. Traditional traffic signals operate on fixed timing schedules and do not adapt to real-time traffic conditions.
 
 This project explores whether computer vision-based vehicle detection can be used to estimate congestion levels and dynamically adjust signal timings.
 
----
 
 ## Dataset Construction
 To train a robust vehicle detection model, a custom dataset was constructed.
@@ -28,7 +26,6 @@ Steps involved:
 
 The resulting dataset represents heterogeneous traffic conditions similar to those observed in Karachi.
 
----
 
 ## Model Training
 The object detection model used in this project is YOLOv8.
@@ -41,7 +38,6 @@ Training involved:
 
 The trained model performs frame-level detection of vehicles in traffic footage.
 
----
 
 ## Vehicle Counting and Density Estimation
 A processing pipeline was developed to convert frame-level detections into structured traffic metrics.
@@ -54,7 +50,6 @@ This pipeline:
 
 These metrics serve as the input to the signal timing model.
 
----
 
 ## Adaptive Signal Timing Model
 A rule-based timing model was designed to map congestion levels to traffic signal timing predictions.
@@ -65,7 +60,6 @@ The model:
 - Applies predefined rules to estimate optimal green light duration
 - Outputs adaptive signal timings intended to reduce waiting time and congestion buildup
 
----
 
 ## System Architecture
 The overall pipeline of the system is as follows:
@@ -84,7 +78,6 @@ Congestion Score Generation
 ↓  
 Adaptive Signal Timing Prediction
 
----
 
 ## Model Details
 
@@ -102,7 +95,7 @@ Training Data:
 
 A consolidated multi-dataset traffic image collection filtered for urban intersection viewpoints.
 
----
+
 
 ## Results
 The trained YOLOv8 model detects multiple vehicle classes under heterogeneous traffic conditions including cars, buses, trucks, and motorcycles.
@@ -116,7 +109,7 @@ Key outputs of the system include:
 
 Example outputs include detected vehicles in traffic frames and computed congestion metrics used for signal timing predictions.
 
----
+
 
 ## Technologies Used
 
